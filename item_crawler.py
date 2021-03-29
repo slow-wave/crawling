@@ -5,7 +5,7 @@ from datetime import date, timedelta
 import pandas as pd
 import re
 
-def category_info(sub_category):
+def category_info(sub_category): #카테고리별로 페이지 depth, 
     page_num = '1' #첫 페이지
     sort = 'pop&sub_sort'
 
@@ -43,7 +43,7 @@ def item_crawling(sub_category,total_page_n):
             item_id_c.append(item['data-no']) #item별 아이디를 가져옴
             img_url_c.append(item.img['data-original']) #item별 img url을 가져옴.
             #좋아요 수 숫자만 가져옴. 없으면 ''
-            like_c.append(item.select_one("p.txt_cnt_like").get_text())
+            #like_c.append(item.select_one("p.txt_cnt_like").get_text())
             page_num_c.append(i) #몇 페이지에서 가져온건지 기록
     print(len(item_id_c), len(img_url_c),len(page_num_c),len(like_c))
 
@@ -75,5 +75,5 @@ if __name__ == "__main__":
     like_c = []
     
     category_info(sub_category)
-    item_crawling(sub_category,total_page_n)
+    item_crawling(sub_category,1)
     to_df()
