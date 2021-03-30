@@ -24,7 +24,7 @@ jobs:
     
     - name: Run Crawler with python
       run: |
-        python "item_crawler.py"
+        python helloworld.py
     - name: Commits
       run: |
         git config --local user.email "memoon-mj@naver.com"
