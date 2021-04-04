@@ -48,7 +48,7 @@ def to_csv(sub_category):
     f_name = '{}_{}.csv'.format(sub_category, d)
 
     df.head()
-    df.to_csv('data/'+f_name,index = False)
+    df.to_csv(f_name,index = False)
 
 def crawling(df):
     for i in range(len(df)):
