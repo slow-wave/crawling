@@ -66,9 +66,9 @@ if __name__ == "__main__":
     options.add_argument('headless') # 브라우저 안 띄우기
     driver = webdriver.Chrome(ChromeDriverManager().install(),options = options)
 
-    category_df = pd.read_csv("data/category_count_20210330.csv",index_col = 0,converters={'sub_category_code':str})
+    category_df = pd.read_csv("category_count_20210330.csv",index_col = 0,converters={'sub_category_code':str})
     category_df =category_df.iloc[1:2,]
-    category_df = category_df.reset_index()
+    category_df = category_df.reset_index() 
     item_id_c = []
     img_url_c = []
     page_num_c = []
