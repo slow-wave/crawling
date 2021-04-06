@@ -5,8 +5,8 @@ from datetime import date, timedelta
 import pandas as pd
 import re
 import os
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
+#from selenium import webdriver
+#from webdriver_manager.chrome import ChromeDriverManager
 
 def item_info(p_count,sub_category):
     for i in range(int(p_count)):
@@ -28,7 +28,7 @@ def item_info(p_count,sub_category):
             page_num_c.append(i) #몇 페이지에서 가져온건지 기록
         
         #동적 데이터라 selenium으로 가져옴.
-        driver.get(url)
+        #driver.get(url)
 
         like = driver.find_elements_by_class_name('txt_cnt_like')
         
@@ -64,9 +64,9 @@ def crawling(df):
 if __name__ == "__main__":
     path = os.getcwd()
 
-    options = webdriver.ChromeOptions() # 크롬 브라우저 옵션
-    options.add_argument('headless') # 브라우저 안 띄우기
-    driver = webdriver.Chrome(ChromeDriverManager().install(),options = options)
+    #options = webdriver.ChromeOptions() # 크롬 브라우저 옵션
+    #options.add_argument('headless') # 브라우저 안 띄우기
+    #driver = webdriver.Chrome(ChromeDriverManager().install(),options = options)
 
     category_df = pd.read_csv(path+'/'+"category_count_20210330.csv",index_col = 0,converters={'sub_category_code':str})
     category_df =category_df.iloc[1:2,]
