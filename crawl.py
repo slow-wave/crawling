@@ -30,10 +30,10 @@ def item_info(p_count,sub_category):
         #동적 데이터라 selenium으로 가져옴.
         #driver.get(url)
 
-        like = driver.find_elements_by_class_name('txt_cnt_like')
+        #like = driver.find_elements_by_class_name('txt_cnt_like')
         
-        for i in like:
-            like_c.append(re.sub('\,','',i.text))
+        #for i in like:
+        #    like_c.append(re.sub('\,','',i.text))
 def to_csv(sub_category):
     df = pd.DataFrame()
     df['item_id'] = item_id_c
