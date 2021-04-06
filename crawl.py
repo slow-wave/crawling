@@ -64,9 +64,9 @@ def crawling(df):
 if __name__ == "__main__":
     path = os.getcwd()
 
-    options = webdriver.ChromeOptions() # 크롬 브라우저 옵션
-    options.add_argument('headless') # 브라우저 안 띄우기
-    driver = webdriver.Chrome(ChromeDriverManager().install(),options = options)
+    #options = webdriver.ChromeOptions() # 크롬 브라우저 옵션
+    #options.add_argument('headless') # 브라우저 안 띄우기
+    #driver = webdriver.Chrome(ChromeDriverManager().install(),options = options)
 
     category_df = pd.read_csv(path+'/'+"category_count_20210330.csv",index_col = 0,converters={'sub_category_code':str})
     category_df =category_df.iloc[1:2,]
