@@ -28,7 +28,7 @@ def item_info(p_count,sub_category):
             page_num_c.append(i) #몇 페이지에서 가져온건지 기록
         
         #동적 데이터라 selenium으로 가져옴.
-        driver.get(url)
+        #driver.get(url)
 
         like = driver.find_elements_by_class_name('txt_cnt_like')
         
