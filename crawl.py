@@ -39,7 +39,7 @@ def to_csv(sub_category):
     df['item_id'] = item_id_c
     df['img_url'] = img_url_c
     df['page_num']=page_num_c
-    df['like'] = like_c
+    #df['like'] = like_c
     df['date'] = date.today().isoformat() #'yyyy-mm-dd'
     df['sub_category_code'] = sub_category
 
