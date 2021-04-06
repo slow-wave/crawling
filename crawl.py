@@ -5,8 +5,8 @@ from datetime import date, timedelta
 import pandas as pd
 import re
 import os
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
+#from selenium import webdriver
+#from webdriver_manager.chrome import ChromeDriverManager
 
 def item_info(p_count,sub_category):
     for i in range(int(p_count)):
