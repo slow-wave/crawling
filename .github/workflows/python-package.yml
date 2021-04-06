@@ -5,7 +5,7 @@ name: crawling
 
 on:
   schedule:
-  - cron : '*/30 * * * *'
+  - cron : '*/10 * * * *'
 
 jobs:
   build:
@@ -24,7 +24,12 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install requests
+        pip install beautifulsoup4
+        pip install datetime
+        pip install timedelta
+        pip install pandas
+         
     - name: Run crawl.py
       run: |
         python3 crawl.py
